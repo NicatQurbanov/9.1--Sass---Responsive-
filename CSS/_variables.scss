@@ -1,0 +1,17 @@
+$developmentColor: #11838E;
+$designColor: #D62261;
+$productColor: #5133A5;
+$fontSizeSmall: 10px;
+$fontFamily: 'Montserrat', sans-serif;
+
+@mixin fontTemplate($fontSize, $fontWeight) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+
+}
+
+@mixin dispFlex($display,$alignItems,$justifyContent) {
+    display: $display;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+}

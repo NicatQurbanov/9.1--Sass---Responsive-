@@ -1,0 +1,55 @@
+@use './variables';
+/* UNIVERSAL SELECTORS */
+body {
+    background-color: #f1f1f1;
+    font-family: variables.$fontFamily;
+}
+
+/* CONTAINER SELECTORS */
+
+ .grid-container {
+    margin: 0 auto;
+    padding: 3em 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 3em 1em;
+    > li {
+        height: 400px;
+        background-color: white;
+        border-radius: 5px;
+    }
+}
+
+/* LIST SELECTORS */
+
+.vacancy {
+    p {
+        text-align: center;
+        position: relative;
+    }
+    &Sector {
+        color: white;
+        background-color: variables.$developmentColor;
+        border-radius: 20px;
+        padding: 7px 5px;
+        position: absolute;
+        top: -10px;
+        width: calc(100% / 2.5);
+        margin: 0 auto;
+        @include variables.fontTemplate($fontSize: 13px, $fontWeight: 600);
+    }
+    &Name {
+        @include variables.fontTemplate($fontSize: 1.2em, $fontWeight: 600);
+    }
+    li {
+       &FlexContainer {
+         @include variables.dispFlex($display:flex,$alignItems:none,$justifyContent: space-between);
+        &Item {
+         @include variables.dispFlex($display:flex,$alignItems:none,$justifyContent: center);
+        }
+       } 
+    }
+}
+
+
+
