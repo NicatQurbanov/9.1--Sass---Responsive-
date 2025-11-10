@@ -40,19 +40,19 @@ body {
   font-weight: 600;
   padding: 50px 0;
 }
-.vacancy liFlexContainer {
+.vacancyLiFlexContainer {
   display: flex;
-  align-items: none;
+  align-items: unset;
   justify-content: space-between;
 }
-.vacancy liFlexContainerItem {
+.vacancyLiFlexContainerItem {
   display: flex;
-  align-items: none;
+  align-items: unset;
   justify-content: center;
 }
-.vacancy liFlexContainer li {
+.vacancyLiFlexContainer li {
   width: 50%;
 }
-.vacancy li img {
+.vacancyLi img {
   width: 7%;
 }/*# sourceMappingURL=main.css.map */

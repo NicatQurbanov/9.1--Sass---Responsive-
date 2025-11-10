@@ -42,11 +42,11 @@ body {
         @include variables.fontTemplate($fontSize: 1.2em, $fontWeight: 600);
         padding: 50px 0;
     }
-    li {
+    &Li {
        &FlexContainer {
-         @include variables.dispFlex($display:flex,$alignItems:none,$justifyContent: space-between);
+         @include variables.dispFlex($display:flex,$alignItems:unset,$justifyContent: space-between);
         &Item {
-         @include variables.dispFlex($display:flex,$alignItems:none,$justifyContent: center);
+         @include variables.dispFlex($display:flex,$alignItems:unset,$justifyContent: center);
         }
         li {
             width: 50%;
