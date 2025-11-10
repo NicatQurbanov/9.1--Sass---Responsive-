@@ -40,6 +40,7 @@ body {
     }
     &Name {
         @include variables.fontTemplate($fontSize: 1.2em, $fontWeight: 600);
+        padding: 50px 0;
     }
     li {
        &FlexContainer {
