@@ -48,7 +48,13 @@ body {
         &Item {
          @include variables.dispFlex($display:flex,$alignItems:none,$justifyContent: center);
         }
-       } 
+        li {
+            width: 50%;
+        }
+       }
+        img {
+            width: 7%;
+        }
     }
 }
 

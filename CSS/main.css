@@ -49,4 +49,10 @@ body {
   display: flex;
   align-items: none;
   justify-content: center;
+}
+.vacancy liFlexContainer li {
+  width: 50%;
+}
+.vacancy li img {
+  width: 7%;
 }/*# sourceMappingURL=main.css.map */
