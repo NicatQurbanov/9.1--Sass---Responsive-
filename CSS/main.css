@@ -6,7 +6,6 @@ body {
 
 /* CONTAINER SELECTORS */
 .grid-container {
-  margin: 0 auto;
   padding: 3em 1em;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -15,10 +14,20 @@ body {
 .grid-container > li {
   height: 400px;
   background-color: white;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 /* LIST SELECTORS */
+.vacancy {
+  box-shadow: -2px 12px 27px -1px rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: -2px 12px 27px -1px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: -2px 12px 27px -1px rgba(0, 0, 0, 0.33);
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .vacancy p {
   text-align: center;
   position: relative;
@@ -27,32 +36,58 @@ body {
   color: white;
   background-color: #11838E;
   border-radius: 20px;
-  padding: 7px 5px;
+  padding: 7px 10px;
   position: absolute;
   top: -10px;
-  width: 40%;
-  margin: 0 auto;
   font-size: 13px;
   font-weight: 600;
+}
+.vacancy .violet {
+  background-color: #5133A5;
+}
+.vacancy .red {
+  background-color: #D62261;
 }
 .vacancyName {
   font-size: 1.2em;
   font-weight: 600;
-  padding: 50px 0;
+  padding: 60px 0;
+  gap: 5px;
 }
 .vacancyLiFlexContainer {
   display: flex;
   align-items: unset;
-  justify-content: space-between;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 0.65em;
 }
 .vacancyLiFlexContainerItem {
   display: flex;
-  align-items: unset;
+  align-items: center;
   justify-content: center;
-}
-.vacancyLiFlexContainer li {
-  width: 50%;
+  gap: 5px;
 }
 .vacancyLi img {
-  width: 7%;
+  width: 20px;
+}
+.vacancyLi img[src="./Data/Images/date.png"] {
+  width: 32px;
+}
+.vacancy li .description {
+  width: 90%;
+  margin: 0 auto 50px;
+}
+.vacancy .link {
+  width: 100%;
+}
+.vacancy .link a {
+  text-decoration: none;
+  color: unset;
+  font-size: 0.8em;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: block;
+  border-top: 1px solid lightgray;
+  text-align: center;
 }/*# sourceMappingURL=main.css.map */

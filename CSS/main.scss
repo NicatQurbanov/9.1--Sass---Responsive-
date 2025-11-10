@@ -8,7 +8,6 @@ body {
 /* CONTAINER SELECTORS */
 
  .grid-container {
-    margin: 0 auto;
     padding: 3em 1em;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -16,13 +15,19 @@ body {
     > li {
         height: 400px;
         background-color: white;
-        border-radius: 5px;
+        border-radius: 10px;
     }
 }
 
 /* LIST SELECTORS */
 
 .vacancy {
+    box-shadow: -2px 12px 27px -1px rgba(0,0,0,0.33);
+    -webkit-box-shadow: -2px 12px 27px -1px rgba(0,0,0,0.33);
+    -moz-box-shadow: -2px 12px 27px -1px rgba(0,0,0,0.33);
+    flex-direction: column;
+    height: 100%;
+    @include variables.dispFlex($display:flex,$alignItems:center,$justifyContent: space-between);
     p {
         text-align: center;
         position: relative;
@@ -31,31 +36,60 @@ body {
         color: white;
         background-color: variables.$developmentColor;
         border-radius: 20px;
-        padding: 7px 5px;
+        padding: 7px 10px;
         position: absolute;
         top: -10px;
-        width: calc(100% / 2.5);
-        margin: 0 auto;
         @include variables.fontTemplate($fontSize: 13px, $fontWeight: 600);
+    }
+    .violet {
+      @include variables.customHeaders(variables.$productColor);
+    }
+    .red {
+      @include variables.customHeaders(variables.$designColor);
     }
     &Name {
         @include variables.fontTemplate($fontSize: 1.2em, $fontWeight: 600);
-        padding: 50px 0;
+        padding: 60px 0;
+        gap: 5px;
     }
     &Li {
        &FlexContainer {
-         @include variables.dispFlex($display:flex,$alignItems:unset,$justifyContent: space-between);
-        &Item {
          @include variables.dispFlex($display:flex,$alignItems:unset,$justifyContent: center);
+         padding: 10px 20px;
+         font-size: 0.65em;
+        &Item {
+         @include variables.dispFlex($display:flex,$alignItems:center,$justifyContent: center);
+         gap: 5px;
         }
-        li {
-            width: 50%;
-        }
+       
        }
         img {
-            width: 7%;
+            width: 20px;
+        }
+        img[src="./Data/Images/date.png"] {
+            width: 32px;
         }
     }
+    li {
+        .description {
+            width: 90%;
+            margin: 0 auto 50px;
+        }
+    }
+    .link {
+        width: 100%;
+            a {
+                text-decoration: none;
+                color: unset;
+                font-size: 0.8em;
+                cursor: pointer;
+                background-color: #f0f0f0;
+                padding: 20px;
+                display: block;
+                border-top: 1px solid lightgray;
+                text-align: center;
+            }
+        }
 }
 
 

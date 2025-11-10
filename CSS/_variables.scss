@@ -15,3 +15,7 @@ $fontFamily: 'Montserrat', sans-serif;
     align-items: $alignItems;
     justify-content: $justifyContent;
 }
+
+@mixin customHeaders($backgroundColor) {
+    background-color: $backgroundColor;
+}
